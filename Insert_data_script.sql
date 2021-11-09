@@ -14,10 +14,10 @@ INSERT INTO Singers (Name) VALUES
     ('Aphex Twin'),
     ('Michael Jackson');
 INSERT INTO Albums (Name, Year) VALUES 
-    ('Closing Time', 1985),
-    ('Slowhand', 1986),
+    ('Closing Time', 2020),
+    ('Slowhand', 2019),
     ('Ring Ring', 1980),
-    ('Spicks and Specks', 1979),
+    ('Spicks and Specks', 2020),
     ('Soul Rebels', 1990),
     ('Light', 1995),
     ('Syro', 2018),
@@ -37,6 +37,7 @@ INSERT INTO Tracks (Name, Duration, Album_id) VALUES
     ('We Will Walk', 286, (select id from albums where name = 'Light')),
     ('XMAS_EVET10', 145, (select id from albums where name = 'Syro')),
     ('My produkt 29', 147, (select id from albums where name = 'Syro')),
+    ('Abra-cadabra', 107, (select id from albums where name = 'Syro')),
     ('Break Of Dawn', 295, (select id from albums where name = 'King of Pop'));
 INSERT INTO Collections (Name, Year) VALUES 
     ('Collection 1', 2015),
@@ -54,6 +55,7 @@ INSERT INTO GenreSinger (Genre_id, Singer_id) VALUES
     ((select id from genres where name = 'Disco'), (select id from singers where name = 'Bee Gees')),
     ((select id from genres where name = 'Reggae'), (select id from singers where name = 'Bob Marley')),
     ((select id from genres where name = 'Reggae'), (select id from singers where name = 'Matisyahu')),
+    ((select id from genres where name = 'Ambient'), (select id from singers where name = 'Matisyahu')),
     ((select id from genres where name = 'Ambient'), (select id from singers where name = 'Aphex Twin')),
     ((select id from genres where name = 'Pop'), (select id from singers where name = 'Michael Jackson'));
 INSERT INTO singeralbum (singer_id, album_id) VALUES 
